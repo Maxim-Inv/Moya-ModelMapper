@@ -8,7 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = "Moya-ModelMapper"
+<<<<<<< HEAD
   s.version          = "4.0.0"
+=======
+  s.version          = "4.1.0"
+>>>>>>> sunshinejr/master
   s.summary          = "ModelMapper bindings for Moya."
   s.description      = <<-EOS
   [ModelMapper](https://github.com/lyft/mapper) bindings for
@@ -24,8 +28,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/sunshinejr/Moya-ModelMapper.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/thesunshinejr'
 
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.11'
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.10'
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
 
@@ -34,22 +38,37 @@ Pod::Spec.new do |s|
 
   s.subspec "Core" do |ss|
     ss.source_files  = "Source/*.swift"
+<<<<<<< HEAD
     ss.dependency "Moya", "8.0.0"
     ss.dependency "ModelMapper", "5.0.0"
+=======
+    ss.dependency "Moya", "~> 8.0.0"
+    ss.dependency "ModelMapper"
+>>>>>>> sunshinejr/master
     ss.framework  = "Foundation"
   end
 
   s.subspec "RxSwift" do |ss|
     ss.source_files = "Source/RxSwift/*.swift"
+<<<<<<< HEAD
     ss.dependency "Moya/RxSwift", "8.0.0"
     ss.dependency "Moya-ModelMapper/Core"
     ss.dependency "RxSwift", "~> 3.1.0"
+=======
+    ss.dependency "Moya/RxSwift", "~> 8.0.0"
+    ss.dependency "Moya-ModelMapper/Core"
+    ss.dependency "RxSwift"
+>>>>>>> sunshinejr/master
   end
 
   s.subspec "ReactiveCocoa" do |ss|
     ss.source_files = "Source/ReactiveCocoa/*.swift"
+<<<<<<< HEAD
     ss.dependency "Moya/ReactiveCocoa", "8.0.0"
+=======
+    ss.dependency "Moya/ReactiveCocoa", "~> 8.0.0"
+>>>>>>> sunshinejr/master
     ss.dependency "Moya-ModelMapper/Core"
-    ss.dependency "ReactiveSwift", "1.0.0-alpha.4"
+    ss.dependency "ReactiveSwift"
   end
 end
